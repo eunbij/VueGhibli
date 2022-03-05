@@ -1,0 +1,100 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+body {
+    margin-top:80px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#app {
+    max-width: 1920px;
+    width: 90%;
+    margin: 0 auto;
+}
+.title {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #222;
+}
+.title h1 {
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 40px;
+    color: #F5F5F5;
+    text-shadow: 4px 4px #666;
+}
+.text {
+    padding: 20px 0;
+    text-align: center;
+}
+.text p {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+.movie {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+#app .movie .movie_info {
+    display: flex;
+}
+#app .movie .movie_info .leftSide img {
+    width: 320px;
+}
+#app .movie .movie_info .leftSide {
+    width: 360px;
+    padding: 20px;
+    border: 1px solid #666;
+    border-radius: 20px;
+    margin: 20px 8px;
+    text-align: center;
+}
+#app .movie .movie_info .rightSide {
+    width: 360px;
+    padding: 20px;
+    border: 1px solid #666;
+    border-radius: 20px;
+    margin: 20px;
+}
+#app .movie .movie_info .rightSide li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+#app .movie .movie_info .rightSide .line {
+    display: block;
+    width: 320px;
+    height: 2px;
+    background: #666;
+    margin: 20px 0;
+}
+#app .movie .movie_info .rightSide li:nth-child(2) {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #333;
+}
+#app .movie .movie_info .rightSide li:nth-child(3) {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #333;
+}
+#app .movie .movie_info .rightSide li a {
+    display: block;
+    word-break: break-all;
+}
+#app .movie .movie_info .rightSide li:last-child {
+    padding-top: 20px;
+    text-align: center;
+}
+#app .movie .movie_info .rightSide img {
+    width: 220px;
+}
+#app .movie .movie_info .rightSide span {
+    font-size: 16px;
+    font-weight: bold;
+}

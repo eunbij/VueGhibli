@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ebjj">
+    <meta name="description" content="vue.js로 api 다루기">
+    <title>Vue.js : STUDIO GHIBLI PHOTO CARD</title>
+    <!-- BootStrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- System Font CSS(optional) -->
+    <!-- <link rel="stylesheet" href="./css/system_font.css"> -->
+    <!-- No Scrollbar CSS -->
+    <!-- <link rel="stylesheet" href="./css/no_scrollbar.css"> -->
+    <!-- 프로젝트 페이지 CSS -->
+    <link rel="stylesheet" href="./css/vueGhibli.css">
+    <!-- HTML5 JS File -->
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.src.js"></script>
+    <!-- JQ PlugIn -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- PreFix Free -->
+    <script src="./js/prefixfree.min.js"></script>
+
+    <!-- 프로젝트 페이지 SCRIPT -->
+</head>
+<body>
+    <div id="app">
+        <div class="title">
+            <h1>STUDIO GHIBLI MOVIE PHOTO CARD</h1>
+        </div>
+        <div class="text">
+            <p>Vue.js를 설치하고 API 다루는 연습을 하였습니다.</p>
+            <p>본 페이지는 PC(1920)에 최적화 되어있습니다.</p>
+        </div>
+        <div class="movie">
+            <div class="movie_info cf" v-for="info in films">
+                <ul class="leftSide">
+                    <li><img :src="info.image" v-bind:alt="info.title"></li>
+                </ul>
+                <ul class="rightSide">
+                    <div class="line"></div>
+                    <li>{{info.original_title}}</li>
+                    <li>{{info.title}}</li>
+                    <div class="line"></div>
+                    <li><span>감독: </span>{{info.director}}</li>
+                    <li><span>개봉일: </span>{{info.release_date}}</li>
+                    <li><span>상영시간: </span>{{info.running_time}}분</li>
+                    <li><span>영화설명: </span>{{info.description}}</li>
+                    <li><img :src="info.movie_banner" v-bind:alt="info.title"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- Vue CORE JS -->
+<script src="./js/vue.2.6.14.js"></script>
+<!-- Vue CORE CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<!-- Vue 애플리케이션 인스턴스 생성 파일 -->
+<script src="./js/vueGhibli.js"></script>
+</body>
+</html>
